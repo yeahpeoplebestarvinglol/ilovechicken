@@ -67,8 +67,8 @@ getgenv().Config = {
         ExcludedPets = {}, -- Pet IDs to never recycle e.g. {"dog", "cat", "shadow_dragon"}
     },
     IdleProgression = {
-        Enabled = false, -- Put pets in pet pen for idle leveling
-        SelectedPets = {}, -- Pet IDs to put in pet pen (empty = use all)
+        Enabled = true, -- Put pets in pet pen for idle leveling
+        SelectedPets = {"endangered_2026_endangered_egg"}, -- Pet IDs to put in pet pen (empty = use all)
         ExcludedPets = {}, -- Pet IDs to never put in pet pen
         PriorityOrder = {}, -- Order: first = highest priority for pen slots (e.g. {"neon", "regular", "mega"})
     },
