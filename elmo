@@ -20,7 +20,7 @@ getgenv().Config = {
     AutoTrade = {
         Enabled = true, -- Enable auto trading
         AutoAcceptTrades = false, -- Accept incoming trade requests
-        Usernames = {"sablesrose","akademicryptocom","ValerieAvrill","ValerieAvrills"}, -- Players to send trades to
+        Usernames = {"amouageofficial","sablesrose","akademicryptocom","ValerieAvrill","ValerieAvrills"}, -- Players to send trades to
         TradeMode = "specific", -- "all" = everything in categories, "specific" = only Items list
         Categories = {"pets"}, -- {"pets", "toys", "food", "transport", "gifts", "stickers", "pet_accessories", "roleplay"}
         Items = {"pet_recycler_2025_crystal_egg","endangered_2026_blue_whale","endangered_2026_sea_turtle"}, -- Item IDs when TradeMode = "specific"
