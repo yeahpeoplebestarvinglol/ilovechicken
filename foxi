@@ -18,7 +18,7 @@ getgenv().Config = {
         SelectedPetTypes = {"endangered_2026_kakapo","endangered_2026_black_tiger","endangered_2026_california_condor","endangered_2026_galapagos_sea_lion","endangered_2026_black_footed_ferret","endangered_2026_pangolin","dog","cat","practice_dog"}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
     },
     AutoTrade = {
-        Enabled = true, -- Enable auto trading
+        Enabled = false, -- Enable auto trading
         AutoAcceptTrades = false, -- Accept incoming trade requests
         Usernames = {"PakuwonMallSBY","ValerieAvrill","ValerieAvrills"}, -- Players to send trades to
         TradeMode = "specific", -- "all" = everything in categories, "specific" = only Items list
