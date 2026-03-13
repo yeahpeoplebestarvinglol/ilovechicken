@@ -18,7 +18,7 @@ getgenv().Config = {
         SelectedPetTypes = {"endangered_2026_kakapo","endangered_2026_black_tiger","endangered_2026_california_condor","endangered_2026_galapagos_sea_lion","endangered_2026_black_footed_ferret","endangered_2026_pangolin","dog","cat","practice_dog"}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
     },
     EventFarm = {
-            CandyCliff = true, -- Automatically complete Candy Cliff event tasks and buys a chissle
+        CandyCliff = true, -- Automatically complete Candy Cliff event tasks and buys a chissle
     },
     AutoTrade = {
         Enabled = false, -- Enable auto trading
