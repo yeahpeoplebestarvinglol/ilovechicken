@@ -69,7 +69,7 @@ getgenv().Config = {
     IdleProgression = {
         Enabled = true, -- Put pets in pet pen for idle leveling
         SelectedPets = {"endangered_egg"}, -- Pet IDs to put in pet pen (empty = use all)
-        ExcludedPets = {"endangered_2026_blue_whale","endangered_2026_sea_turtle","pet_recycler_2025_crystal_egg"}, -- Pet IDs to never put in pet pen
+        ExcludedPets = {"admin_abuse_egg_2026_egg","endangered_2026_blue_whale","endangered_2026_sea_turtle","pet_recycler_2025_crystal_egg"}, -- Pet IDs to never put in pet pen
         PriorityOrder = {}, -- Order: first = highest priority for pen slots (e.g. {"neon", "regular", "mega"})
     },
     Webhook = {
