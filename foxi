@@ -64,12 +64,12 @@ getgenv().Config = {
         Enabled = true, -- Toggle auto recycling on/off
         RarityFilter = {common = {"regular","neon","mega"}, uncommon = {"regular", "neon", "mega"}, rare = {"regular", "neon", "mega"}, ultra_rare = {"regular", "neon", "mega"}},
         AgeFilter = {}, -- Empty = all ages, or specific ages e.g. {1, 2, 3, 4, 5, 6} (1=Newborn, 6=Full Grown)
-        ExcludedPets = {"sugarfest_2026_cocoadile"}, -- Pet IDs to never recycle e.g. {"dog", "cat", "shadow_dragon"}
+        ExcludedPets = {"sugarfest_2026_cocoadile","sugarfest_2026_gumball_caterpillar"}, -- Pet IDs to never recycle e.g. {"dog", "cat", "shadow_dragon"}
     },
     IdleProgression = {
         Enabled = true, -- Put pets in pet pen for idle leveling
         SelectedPets = {"endangered_egg"}, -- Pet IDs to put in pet pen (empty = use all)
-        ExcludedPets = {"admin_abuse_egg_2026_egg","endangered_2026_blue_whale","endangered_2026_sea_turtle","pet_recycler_2025_crystal_egg"}, -- Pet IDs to never put in pet pen
+        ExcludedPets = {"sugarfest_2026_cocoadile","sugarfest_2026_gumball_caterpillar","admin_abuse_egg_2026_egg","endangered_2026_blue_whale","endangered_2026_sea_turtle","pet_recycler_2025_crystal_egg"}, -- Pet IDs to never put in pet pen
         PriorityOrder = {}, -- Order: first = highest priority for pen slots (e.g. {"neon", "regular", "mega"})
     },
     Webhook = {
