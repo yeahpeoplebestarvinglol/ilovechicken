@@ -64,7 +64,7 @@ getgenv().Config = {
         Enabled = true, -- Toggle auto recycling on/off
         RarityFilter = {common = {"regular","neon","mega"}, uncommon = {"regular", "neon", "mega"}, rare = {"regular", "neon", "mega"}, ultra_rare = {"regular", "neon", "mega"}},
         AgeFilter = {}, -- Empty = all ages, or specific ages e.g. {1, 2, 3, 4, 5, 6} (1=Newborn, 6=Full Grown)
-        ExcludedPets = {sugarfest_2026_cocoadile}, -- Pet IDs to never recycle e.g. {"dog", "cat", "shadow_dragon"}
+        ExcludedPets = {"sugarfest_2026_cocoadile"}, -- Pet IDs to never recycle e.g. {"dog", "cat", "shadow_dragon"}
     },
     IdleProgression = {
         Enabled = true, -- Put pets in pet pen for idle leveling
