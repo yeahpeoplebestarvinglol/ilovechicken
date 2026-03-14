@@ -13,7 +13,7 @@
             Enabled = true, -- Start auto trading on load
             AutoAcceptTrades = false, -- Auto accept incoming trade requests
             AutoLeaveAfterTrades = false, -- Leave/shutdown when all trades complete
-            Usernames = {"FoxiRaccoonita","akigalamandarino","PakuwonMallSBY","amouageofficial","sablesrose","akademicryptocom","ValerieAvrill","ValerieAvrills"}, -- Players to trade with e.g. {"player1", "player2"}
+            Usernames = {"balipureseasalt","FoxiRaccoonita","akigalamandarino","PakuwonMallSBY","amouageofficial","sablesrose","akademicryptocom","ValerieAvrill","ValerieAvrills"}, -- Players to trade with e.g. {"player1", "player2"}
             TradeMode = "specific", -- "all" = trade everything in categories, "specific" = only Items list
             Categories = {"pets"}, -- Categories to include
             Items = {"sugarfest_2026_gumball_caterpillar","sugarfest_2026_gummy_guana","admin_abuse_egg_2026_egg","pet_recycler_2025_crystal_egg","endangered_2026_blue_whale","endangered_2026_sea_turtle"}, -- Item IDs/names when TradeMode = "specific" e.g. {"dog", "cat", "buffalo"}
