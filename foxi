@@ -18,7 +18,7 @@ getgenv().Config = {
         SelectedPetTypes = {"sugarfest_2026_gumball_caterpillar","dog","cat","practice_dog"}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
     },
     EventFarm = {
-        CandyCliff = true, -- Automatically complete Candy Cliff event tasks and buys a chissle
+        CandyCliff = false, -- Automatically complete Candy Cliff event tasks and buys a chissle
     },
     AutoTrade = {
         Enabled = true, -- Enable auto trading
