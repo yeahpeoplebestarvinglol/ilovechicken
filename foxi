@@ -17,7 +17,7 @@ getgenv().Config = {
         SelectiveFarm = true, -- If true, only farm pets in SelecatedPetTypes list
         SelectedPetTypes = {"sugarfest_2026_gumball_caterpillar","dog","cat","practice_dog"}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
     },
-     EventFarm = {
+    EventFarm = {
         CandyCliff = false, -- Automatically complete Candy Cliff event tasks and buys a chissle
         MochiNail = true, -- Automatically complete Mochi Nail event and buys the tool needed
     },
