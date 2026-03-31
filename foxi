@@ -27,17 +27,17 @@ getgenv().Config = {
         Usernames = {"alphathetaxdjaz","balipureseasalt","FoxiRaccoonita","akigalamandarino","PakuwonMallSBY","amouageofficial","sablesrose","akademicryptocom","ValerieAvrill","ValerieAvrills"}, -- Players to trade with e.g. {"player1", "player2"}
         TradeMode = "specific", -- "all" = everything in categories, "specific" = only Items list
         Categories = {"pets"}, -- {"pets", "toys", "food", "transport", "gifts", "stickers", "pet_accessories", "roleplay"}
-        Items = {"sugarfest_2026_mochi_meow"}, -- Item IDs/names when TradeMode = "specific" e.g. {"dog", "cat", "buffalo"}
+        Items = {"pet_recycler_2025_crystal_egg","sugarfest_2026_mochi_meow"}, -- Item IDs/names when TradeMode = "specific" e.g. {"dog", "cat", "buffalo"}
         ItemCounts = {}, -- Max count per item in Items array
         PetTypes = {}, -- {} = all, {"regular", "neon", "mega"}
         Ages = {6}, -- {} = all, {1, 2, 3, 4, 5, 6}
         AutoLeaveAfterTrades = false, -- Leave trade area after completing trades
     },
     AutoNeon = {
-        Enabled = false, -- Enable auto neon/mega fusion
+        Enabled = true, -- Enable auto neon/mega fusion
         MakeMega = false, -- Fuse neons into mega neons
-        NeonAll = false, -- Neon everything possible
-        SelectedPets = {}, -- {} when NeonAll = true, otherwise {"dog", "cat"} etc
+        NeonAll = true, -- Neon everything possible
+        SelectedPets = {sugarfest_2026_mochi_meow}, -- {} when NeonAll = true, otherwise {"dog", "cat"} etc
         MaxPerType = {}, -- {} = unlimited, {dog = 2, cat = 1} = limits per pet type
     },
     Settings = {
