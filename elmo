@@ -19,7 +19,7 @@ getgenv().Config = {
     },
     EventFarm = {
         CandyCliff = false, -- Automatically complete Candy Cliff event tasks and buys a chissle
-        MochiNail = true, -- Automatically complete Mochi Nail event and buys the tool needed
+        MochiNail = false, -- Automatically complete Mochi Nail event and buys the tool needed
     },
     AutoTrade = {
         Enabled = true,
@@ -62,7 +62,7 @@ getgenv().Config = {
     },
     AutoBuy = {
         Enabled = true, -- Automatically buy items from shops
-        SelectedItems = {"sugarfest_2026_mochi_mallet","pet_recycler_2025_crystal_egg"}, -- Item IDs to buy
+        SelectedItems = {"pet_recycler_2025_crystal_egg"}, -- Item IDs to buy
         BuyAmounts = {}, -- How many of each item to buy. Example: {5, 10} buys 5 cracked_eggs and 10 sandwiches. Empty {} buys infinite of each item. If there are more items than amounts, remaining items default to infinite.
     },
     AutoPay = {
