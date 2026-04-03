@@ -36,7 +36,7 @@ getgenv().Config = {
         },
         PetFilters = {
             sugarfest_2026_dark_choccybunny = {
-                regular = {},
+                regular = {6},
                 neon = {},
                 mega = {},
             },
@@ -57,8 +57,8 @@ getgenv().Config = {
         LureId = "ice_dimension_2025_ice_soup_bait" -- what lure to use for example: "ice_dimension_2025_ice_soup_bait"
     },
     AutoPotion = {
-        Enabled = false, -- Use age potions on pets to level them up
-        SelectedPets = {"sugarfest_2026_mochi_meow"}, -- Pet IDs to use potions on (empty = does nothing)
+        Enabled = true, -- Use age potions on pets to level them up
+        SelectedPets = {"sugarfest_2026_dark_choccybunny"}, -- Pet IDs to use potions on (empty = does nothing)
     },
     AutoBuy = {
         Enabled = true, -- Automatically buy items from shops
