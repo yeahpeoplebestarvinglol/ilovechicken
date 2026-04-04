@@ -28,7 +28,7 @@ getgenv().Config = {
         Usernames = {"alphathetaxdjaz","balipureseasalt","akigalamandarino","amouageofficial","sablesrose","akademicryptocom","ValerieAvrill","ValerieAvrills"},
         TradeMode = "specific",
         Categories = {"pets"},
-        Items = {"sugarfest_2026_dark_choccybunny"},
+        Items = {"sugarfest_2026_dark_choccybunny","sugarfest_2026_mochi_meow"},
         ItemCounts = {},
         GlobalPetFilter = {
             Versions = {},
@@ -36,6 +36,11 @@ getgenv().Config = {
         },
         PetFilters = {
             sugarfest_2026_dark_choccybunny = {
+                regular = {6},
+                neon = {},
+                mega = {},
+            },
+            sugarfest_2026_mochi_meow = {
                 regular = {6},
                 neon = {},
                 mega = {},
