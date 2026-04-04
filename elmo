@@ -36,7 +36,7 @@ getgenv().Config = {
         },
         PetFilters = {
             sugarfest_2026_dark_choccybunny = {
-                regular = {},
+                regular = {6},
                 neon = {},
                 mega = {},
             },
