@@ -15,11 +15,11 @@ getgenv().Config = {
         FarmUntilFullGrown = true, -- If true, selects pets that aren't full grown first
         PrioritizeFriendship = false, -- If true, selects pets with higher friendship level first
         SelectiveFarm = true, -- If true, only farm pets in SelecatedPetTypes list
-        SelectedPetTypes = {"sugarfest_2026_dark_choccybunny","dog","cat","practice_dog"}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
+        SelectedPetTypes = {"sugarfest_2026_mochi_meow","dog","cat","practice_dog"}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
     },
     EventFarm = {
         CandyCliff = false, -- Automatically complete Candy Cliff event tasks and buys a chissle
-        MochiNail = false, -- Automatically complete Mochi Nail event and buys the tool needed
+        MochiNail = true, -- Automatically complete Mochi Nail event and buys the tool needed
     },
     AutoTrade = {
         Enabled = true,
@@ -63,11 +63,11 @@ getgenv().Config = {
     },
     AutoPotion = {
         Enabled = true, -- Use age potions on pets to level them up
-        SelectedPets = {"sugarfest_2026_dark_choccybunny"}, -- Pet IDs to use potions on (empty = does nothing)
+        SelectedPets = {"sugarfest_2026_mochi_meow"}, -- Pet IDs to use potions on (empty = does nothing)
     },
     AutoBuy = {
         Enabled = true, -- Automatically buy items from shops
-        SelectedItems = {"sugarfest_2026_choccybunny_box","pet_recycler_2025_crystal_egg"}, -- Item IDs to buy
+        SelectedItems = {"pet_recycler_2025_crystal_egg"}, -- Item IDs to buy
         BuyAmounts = {}, -- How many of each item to buy. Example: {5, 10} buys 5 cracked_eggs and 10 sandwiches. Empty {} buys infinite of each item. If there are more items than amounts, remaining items default to infinite.
     },
     AutoPay = {
@@ -75,8 +75,8 @@ getgenv().Config = {
         TargetPlayer = "", -- Username of player to pay bucks to
     },
     AutoOpen = {
-        Enabled = true, -- Open gift boxes, baits, etc automatically
-        Items = {"sugarfest_2026_choccybunny_box"}, -- Item IDs to auto open
+        Enabled = false, -- Open gift boxes, baits, etc automatically
+        Items = {}, -- Item IDs to auto open
     },
     AutoRecycle = {
         Enabled = true, -- Toggle auto recycling on/off
