@@ -72,7 +72,7 @@ getgenv().Config = {
     },
     AutoBuy = {
         Enabled = true, -- Automatically buy items from shops
-        SelectedItems = {"pet_recycler_2025_crystal_egg"}, -- Item IDs to buy
+        SelectedItems = {"sugarfest_2026_choccybunny_box","pet_recycler_2025_crystal_egg"}, -- Item IDs to buy
         BuyAmounts = {}, -- How many of each item to buy. Example: {5, 10} buys 5 cracked_eggs and 10 sandwiches. Empty {} buys infinite of each item. If there are more items than amounts, remaining items default to infinite.
     },
     AutoPay = {
@@ -80,8 +80,8 @@ getgenv().Config = {
         TargetPlayer = "", -- Username of player to pay bucks to
     },
     AutoOpen = {
-        Enabled = false, -- Open gift boxes, baits, etc automatically
-        Items = {}, -- Item IDs to auto open
+        Enabled = true, -- Open gift boxes, baits, etc automatically
+        Items = {"sugarfest_2026_choccybunny_box"}, -- Item IDs to auto open
     },
     AutoRecycle = {
         Enabled = true, -- Toggle auto recycling on/off
