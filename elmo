@@ -46,7 +46,7 @@ getgenv().Config = {
                 mega = {},
             },
             sugarfest_2026_easter_bunny = {
-                regular = {},
+                regular = {6},
                 neon = {},
                 mega = {},
             },
