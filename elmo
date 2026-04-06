@@ -28,7 +28,7 @@ getgenv().Config = {
         Usernames = {"sosischrispork","pikachugreyfelthat","jacknjohnkitchen","ampmwatch","alphathetaxdjaz","balipureseasalt","akigalamandarino","amouageofficial","sablesrose","akademicryptocom","ValerieAvrill","ValerieAvrills"},
         TradeMode = "specific",
         Categories = {"pets"},
-        Items = {"sugarfest_2026_dark_choccybunny","sugarfest_2026_mochi_meow","sugarfest_2026_easter_bunny"},
+        Items = {"sugarfest_2026_dark_choccybunny","sugarfest_2026_mochi_meow","sugarfest_2026_easter_bunny","penguins_2025_dango_penguins","food_pets_2026_dragonfruit_fox","endangered_2026_silverback_gorilla"},
         ItemCounts = {},
         GlobalPetFilter = {
             Versions = {},
@@ -47,6 +47,21 @@ getgenv().Config = {
             },
             sugarfest_2026_easter_bunny = {
                 regular = {6},
+                neon = {},
+                mega = {},
+            },
+            penguins_2025_dango_penguins = {
+                regular = {},
+                neon = {},
+                mega = {},
+            },
+            food_pets_2026_dragonfruit_fox = {
+                regular = {},
+                neon = {},
+                mega = {},
+            },
+            endangered_2026_silverback_gorilla = {
+                regular = {},
                 neon = {},
                 mega = {},
             },
