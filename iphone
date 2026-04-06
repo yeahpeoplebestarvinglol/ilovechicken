@@ -113,4 +113,4 @@ fi
 log "[+] Boot done"
 echo "══════════════════════════════" >> "$BOOT_LOG"
 EOF
-chmod +x ~/.termux/boot/winterhub_agent.sh && echo "[WinterHub] Auto-boot script installed successfully"
+chmod +x ~/.termux/boot/winterhub_agent.sh
