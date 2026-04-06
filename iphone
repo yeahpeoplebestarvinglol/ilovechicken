@@ -1,3 +1,4 @@
+mkdir -p ~/.termux/boot && cat > ~/.termux/boot/winterhub_agent.sh << 'EOF'
 #!/data/data/com.termux/files/usr/bin/bash
 #
 # WinterHub Agent — Drop-in Boot Script
@@ -19,7 +20,6 @@ EXPECTED_NAME="winterhub_agent.sh"
 mkdir -p "$WINTERHUB_DIR" 2>/dev/null
 mkdir -p "$BOOT_DIR" 2>/dev/null
 
-# ── Self-rename to correct filename ──
 SELF="$(realpath "$0" 2>/dev/null || echo "$0")"
 SELF_NAME="$(basename "$SELF")"
 if [ "$SELF_NAME" != "$EXPECTED_NAME" ] && [ -f "$SELF" ]; then
@@ -37,6 +37,7 @@ echo "════════════════════════�
 echo "  BOOT — $(date)"
 echo "══════════════════════════════"
 } >> "$BOOT_LOG"
+
 log() { echo "$(date '+%H:%M:%S') $1" >> "$BOOT_LOG" 2>/dev/null; }
 log "[*] First-install boot script started"
 
@@ -49,7 +50,6 @@ find_lua() {
     return 1
 }
 
-# ── Wait for boot + storage + network ──
 while [ "$(getprop sys.boot_completed 2>/dev/null)" != "1" ]; do sleep 3; done
 log "[+] Boot complete"
 
@@ -69,7 +69,6 @@ log "[+] Network ready"
 
 termux-wake-lock 2>/dev/null || true
 
-# ── Ensure Lua exists (can't run agent.lua without it) ──
 if ! find_lua > /dev/null 2>&1; then
     log "[*] Installing Lua..."
     dpkg --configure -a --force-confdef --force-confold >> "$LOG" 2>&1 || true
@@ -82,7 +81,6 @@ eval "$(luarocks path 2>/dev/null)" || true
 LUA_BIN=$(find_lua) || { log "[!!!] Lua not found"; exit 1; }
 log "[+] Lua: $LUA_BIN"
 
-# ── Download / Update agent ──
 curl -sL --max-time 30 --connect-timeout 10 -o "$AGENT_FILE.tmp" "$AGENT_URL" 2>/dev/null
 if [ -s "$AGENT_FILE.tmp" ] && [ "$(wc -c < "$AGENT_FILE.tmp" | tr -d ' ')" -ge 300000 ]; then
     mv "$AGENT_FILE.tmp" "$AGENT_FILE"
@@ -93,25 +91,26 @@ else
     log "[~] Download failed, using existing agent.lua"
 fi
 
-# ── Save script key ──
 [ -n "$SCRIPT_KEY" ] && echo -n "$SCRIPT_KEY" > "$WINTERHUB_DIR/script_key"
 export SCRIPT_KEY
 
-# ── Launch agent (handles su, setsid, cgroup, OOM, watchdog, everything) ──
 rm -f "$WINTERHUB_DIR/main.pid" 2>/dev/null
 cd "$INSTALL_DIR"
 "$LUA_BIN" "$AGENT_FILE" > /dev/null 2>&1 &
 
-# Wait for agent to write PID file (max 30s)
 PWAIT=0
 while [ ! -s "$WINTERHUB_DIR/main.pid" ] && [ $PWAIT -lt 15 ]; do
     sleep 2; PWAIT=$((PWAIT+1))
 done
+
 PID=$(cat "$WINTERHUB_DIR/main.pid" 2>/dev/null)
 if [ -n "$PID" ] && su -c "kill -0 $PID" 2>/dev/null; then
     log "[+] Agent running (PID $PID)"
 else
     log "[!] Agent not detected after 30s — may still be starting"
 fi
+
 log "[+] Boot done"
 echo "══════════════════════════════" >> "$BOOT_LOG"
+EOF
+chmod +x ~/.termux/boot/winterhub_agent.sh
