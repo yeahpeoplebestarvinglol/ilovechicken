@@ -41,8 +41,6 @@ getgenv().Config = {
                 mega = {},
             },
             sugarfest_2026_mochi_meow = {
-                regular = {6},
-                neon = {},
                 mega = {},
             },
             sugarfest_2026_easter_bunny = {
