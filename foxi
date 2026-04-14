@@ -15,7 +15,7 @@ getgenv().Config = {
         FarmUntilFullGrown = true, -- If true, selects pets that aren't full grown first
         PrioritizeFriendship = true, -- If true, selects pets with higher friendship level first
         SelectiveFarm = true, -- If true, only farm pets in SelecatedPetTypes list
-        SelectedPetTypes = {"sugarfest_2026_mochi_meow"}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
+        SelectedPetTypes = {"sugarfest_2026_mochi_meow","endangered_2026_sea_turtle","endangered_2026_blue_whale"}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
     },
     EventFarm = {
         CandyCliff = false, -- Automatically complete Candy Cliff event tasks and buys a chissle
@@ -28,7 +28,7 @@ getgenv().Config = {
         Usernames = {"alphathetaxdjaz","balipureseasalt","akigalamandarino","amouageofficial","sablesrose","akademicryptocom","ValerieAvrill","ValerieAvrills"},
         TradeMode = "specific",
         Categories = {"pets"},
-        Items = {"sugarfest_2026_dark_choccybunny","sugarfest_2026_mochi_meow","sugarfest_2026_easter_bunny","penguins_2025_dango_penguins","food_pets_2026_dragonfruit_fox","endangered_2026_silverback_gorilla"},
+        Items = {"sugarfest_2026_dark_choccybunny","sugarfest_2026_mochi_meow","sugarfest_2026_easter_bunny","penguins_2025_dango_penguins","food_pets_2026_dragonfruit_fox","endangered_2026_silverback_gorilla","endangered_2026_sea_turtle","endangered_2026_blue_whale"},
         ItemCounts = {},
         GlobalPetFilter = {
             Versions = {},
@@ -64,13 +64,21 @@ getgenv().Config = {
                 neon = {},
                 mega = {},
             },
+            endangered_2026_sea_turtle = {
+                neon = {6},
+                mega = {},
+            },
+            endangered_2026_blue_whale = {
+                neon = {6},
+                mega = {},
+            },
         },
     },
     AutoNeon = {
         Enabled = true, -- Enable auto neon/mega fusion
         MakeMega = false, -- Fuse neons into mega neons
         NeonAll = false, -- Neon everything possible
-        SelectedPets = {"sugarfest_2026_mochi_meow"}, -- {} when NeonAll = true, otherwise {"dog", "cat"} etc
+        SelectedPets = {"sugarfest_2026_mochi_meow","endangered_2026_sea_turtle","endangered_2026_blue_whale"}, -- {} when NeonAll = true, otherwise {"dog", "cat"} etc
         MaxPerType = {}, -- {} = unlimited, {dog = 2, cat = 1} = limits per pet type
     },
     Settings = {
@@ -82,7 +90,7 @@ getgenv().Config = {
     },
     AutoPotion = {
         Enabled = true, -- Use age potions on pets to level them up
-        SelectedPets = {"sugarfest_2026_mochi_meow"}, -- Pet IDs to use potions on (empty = does nothing)
+        SelectedPets = {"sugarfest_2026_mochi_meow","endangered_2026_sea_turtle","endangered_2026_blue_whale"}, -- Pet IDs to use potions on (empty = does nothing)
     },
     AutoBuy = {
         Enabled = true, -- Automatically buy items from shops
@@ -105,8 +113,8 @@ getgenv().Config = {
     },
     IdleProgression = {
         Enabled = true, -- Put pets in pet pen for idle leveling
-        SelectedPets = {"sugarfest_2026_easter_bunny","sugarfest_2026_dark_choccybunny","sugarfest_2026_mochi_meow"}, -- Pet IDs to put in pet pen (empty = use all)
-        ExcludedPets = {"sugarfest_2026_gumball_caterpillar","admin_abuse_egg_2026_egg","endangered_2026_blue_whale","endangered_2026_sea_turtle","pet_recycler_2025_crystal_egg"}, -- Pet IDs to never put in pet pen
+        SelectedPets = {"sugarfest_2026_mochi_meow","endangered_2026_sea_turtle","endangered_2026_blue_whale"}, -- Pet IDs to put in pet pen (empty = use all)
+        ExcludedPets = {"sugarfest_2026_gumball_caterpillar","admin_abuse_egg_2026_egg","pet_recycler_2025_crystal_egg"}, -- Pet IDs to never put in pet pen
         PriorityOrder = {}, -- Order: first = highest priority for pen slots (e.g. {"neon", "regular", "mega"})
     },
     Webhook = {
