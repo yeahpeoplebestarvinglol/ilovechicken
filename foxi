@@ -19,7 +19,7 @@ getgenv().Config = {
     },
     EventFarm = {
         CandyCliff = false, -- Automatically complete Candy Cliff event tasks and buys a chissle
-        MochiNail = true, -- Automatically complete Mochi Nail event and buys the tool needed
+        MochiNail = false, -- Automatically complete Mochi Nail event and buys the tool needed
     },
     AutoTrade = {
         Enabled = true,
