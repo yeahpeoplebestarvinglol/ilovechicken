@@ -94,7 +94,7 @@ getgenv().Config = {
     },
     AutoBuy = {
         Enabled = true, -- Automatically buy items from shops
-        SelectedItems = {"pet_recycler_2025_crystal_egg"}, -- Item IDs to buy
+        SelectedItems = {"sugarfest_2026_mochi_meow","pet_recycler_2025_crystal_egg"}, -- Item IDs to buy
         BuyAmounts = {}, -- How many of each item to buy. Example: {5, 10} buys 5 cracked_eggs and 10 sandwiches. Empty {} buys infinite of each item. If there are more items than amounts, remaining items default to infinite.
     },
     AutoPay = {
