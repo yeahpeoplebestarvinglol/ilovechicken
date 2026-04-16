@@ -92,6 +92,7 @@ getgenv().Config = {
     AutoPotion = {
         Enabled = true, -- Use age potions on pets to level them up
         SelectedPets = {"sugarfest_2026_mochi_meow","endangered_2026_sea_turtle","endangered_2026_blue_whale"}, -- Pet IDs to use potions on (empty = does nothing)
+        PotionVersionFilter = {},
     },
     AutoBuy = {
         Enabled = true, -- Automatically buy items from shops
