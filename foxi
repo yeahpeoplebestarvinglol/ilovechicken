@@ -20,7 +20,7 @@ getgenv().Config = {
     },
     EventFarm = {
         CandyCliff = false, -- Automatically complete Candy Cliff event tasks and buys a chissle
-        MochiNail = false, -- Automatically complete Mochi Nail event and buys the tool needed
+        MochiNail = true, -- Automatically complete Mochi Nail event and buys the tool needed
     },
     AutoTrade = {
         Enabled = true,
@@ -86,12 +86,12 @@ getgenv().Config = {
         AutoShowUI = false, -- Load the UI on script start (main overlay disable for less memory usage)
         ShowOverlay = true, -- Show stats overlay (disables 3D rendering)
         ReduceGraphics = true, -- Reduce graphics quality to minimum
-        FPSCap = 2, -- FPS cap option (0 = uncapped)
+        FPSCap = 3, -- FPS cap option (0 = uncapped)
         LureId = "ice_dimension_2025_ice_soup_bait" -- what lure to use for example: "ice_dimension_2025_ice_soup_bait"
     },
     AutoPotion = {
         Enabled = true, -- Use age potions on pets to level them up
-        SelectedPets = {sugarfest_2026_mochi_meow","endangered_2026_sea_turtle","endangered_2026_blue_whale"}, -- Pet IDs to use potions on (empty = does nothing)
+        SelectedPets = {"sugarfest_2026_mochi_meow","endangered_2026_sea_turtle","endangered_2026_blue_whale"}, -- Pet IDs to use potions on (empty = does nothing)
         PotionVersionFilter = {},
     },
     AutoBuy = {
