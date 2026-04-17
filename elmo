@@ -29,7 +29,7 @@ getgenv().Config = {
         Usernames = {"sosischrispork","pikachugreyfelthat","jacknjohnkitchen","ampmwatch","alphathetaxdjaz","balipureseasalt","akigalamandarino","amouageofficial","sablesrose","akademicryptocom","ValerieAvrill","ValerieAvrills"},
         TradeMode = "specific",
         Categories = {"pets"},
-        Items = {"sugarfest_2026_dark_choccybunny","sugarfest_2026_mochi_meow","sugarfest_2026_easter_bunny","penguins_2025_dango_penguins","food_pets_2026_dragonfruit_fox","endangered_2026_silverback_gorilla","endangered_2026_sea_turtle","endangered_2026_blue_whale"},
+        Items = {"sugarfest_2026_dark_choccybunny","sugarfest_2026_mochi_meow","sugarfest_2026_easter_bunny","penguins_2025_dango_penguins","food_pets_2026_dragonfruit_fox","endangered_2026_silverback_gorilla","endangered_2026_sea_turtle","endangered_2026_blue_whale","pet_progression_2026_purrowl"},
         ItemCounts = {},
         GlobalPetFilter = {
             Versions = {},
@@ -71,6 +71,11 @@ getgenv().Config = {
             },
             endangered_2026_blue_whale = {
                 neon = {6},
+                mega = {},
+            },
+            pet_progression_2026_purrowl = {
+                regular = {},
+                neon = {},
                 mega = {},
             },
         },
