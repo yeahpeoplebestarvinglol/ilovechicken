@@ -14,7 +14,7 @@ getgenv().Config = {
         BuyEggType = "endangered_2026_endangered_egg", -- Which egg to buy when BuyEggs is true ("any" or specific egg ID)
         MaxPets = 1, -- How many pets to equip at once (1 = free, 2 = requires Robux gamepass)
         FarmUntilFullGrown = true, -- If true, selects pets that aren't full grown first
-        PrioritizeFriendship = true, -- If true, selects pets with higher friendship level first
+        PrioritizeFriendship = false, -- If true, selects pets with higher friendship level first
         SelectiveFarm = true, -- If true, only farm pets in SelecatedPetTypes list
         SelectedPetTypes = {"sugarfest_2026_mochi_meow","endangered_2026_sea_turtle","endangered_2026_blue_whale"}, -- Pet IDs to farm when SelectiveFarm is true (e.g., {"dog", "cat"})
     },
