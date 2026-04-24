@@ -29,7 +29,7 @@ getgenv().Config = {
         Usernames = {"alphathetaxdjaz","balipureseasalt","akigalamandarino","amouageofficial","sablesrose","akademicryptocom","ValerieAvrill","ValerieAvrills"},
         TradeMode = "specific",
         Categories = {"pets"},
-        Items = {"sugarfest_2026_dark_choccybunny","sugarfest_2026_mochi_meow","sugarfest_2026_easter_bunny","penguins_2025_dango_penguins","food_pets_2026_dragonfruit_fox","endangered_2026_silverback_gorilla","endangered_2026_sea_turtle","endangered_2026_blue_whale","pet_progression_2026_purrowl"},
+        Items = {"sugarfest_2026_dark_choccybunny","sugarfest_2026_mochi_meow","sugarfest_2026_easter_bunny","penguins_2025_dango_penguins","food_pets_2026_dragonfruit_fox","endangered_2026_silverback_gorilla","endangered_2026_sea_turtle","endangered_2026_blue_whale","pet_progression_2026_purrowl","lss_2026_glormy_crab"},
         ItemCounts = {},
         GlobalPetFilter = {
             Versions = {},
@@ -78,6 +78,11 @@ getgenv().Config = {
                 neon = {},
                 mega = {},
             },
+            lss_2026_glormy_crab = {
+                regular = {},
+                neon = {},
+                mega = {},
+            },
         },
     },
     AutoNeon = {
@@ -101,7 +106,7 @@ getgenv().Config = {
     },
     AutoBuy = {
         Enabled = true, -- Automatically buy items from shops
-        SelectedItems = {"sugarfest_2026_mochi_meow"}, -- Item IDs to buy
+        SelectedItems = {"sugarfest_2026_mochi_meow","lss_2026_glormy_crab"}, -- Item IDs to buy
         BuyAmounts = {}, -- How many of each item to buy. Example: {5, 10} buys 5 cracked_eggs and 10 sandwiches. Empty {} buys infinite of each item. If there are more items than amounts, remaining items default to infinite.
     },
     AutoPay = {
@@ -121,7 +126,7 @@ getgenv().Config = {
     IdleProgression = {
         Enabled = true, -- Put pets in pet pen for idle leveling
         SelectedPets = {"sugarfest_2026_mochi_meow","endangered_2026_sea_turtle","endangered_2026_blue_whale"}, -- Pet IDs to put in pet pen (empty = use all)
-        ExcludedPets = {"sugarfest_2026_gumball_caterpillar","admin_abuse_egg_2026_egg","pet_recycler_2025_crystal_egg","penguins_2025_dango_penguins","food_pets_2026_dragonfruit_fox","endangered_2026_silverback_gorilla","pet_progression_2026_purrowl"}, -- Pet IDs to never put in pet pen
+        ExcludedPets = {"sugarfest_2026_gumball_caterpillar","admin_abuse_egg_2026_egg","pet_recycler_2025_crystal_egg","penguins_2025_dango_penguins","food_pets_2026_dragonfruit_fox","endangered_2026_silverback_gorilla","pet_progression_2026_purrowl"."lss_2026_glormy_crab"}, -- Pet IDs to never put in pet pen
         PriorityOrder = {"regular"}, -- Order: first = highest priority for pen slots (e.g. {"neon", "regular", "mega"})
     },
     Webhook = {
