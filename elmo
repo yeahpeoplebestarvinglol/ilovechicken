@@ -42,7 +42,6 @@ getgenv().Config = {
                 mega = {},
             },
             sugarfest_2026_mochi_meow = {
-                regular = {6},
                 neon = {6},
                 mega = {},
             },
@@ -67,17 +66,14 @@ getgenv().Config = {
                 mega = {},
             },
             endangered_2026_sea_turtle = {
-                regular = {6},
                 neon = {6},
                 mega = {},
             },
             endangered_2026_blue_whale = {
-                regular = {6},
                 neon = {6},
                 mega = {},
             },
             pet_progression_2026_purrowl = {
-                regular = {6},
                 neon = {6},
                 mega = {},
             },
