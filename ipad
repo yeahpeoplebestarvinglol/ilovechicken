@@ -1,1 +1,49 @@
+mkdir -p ~/.termux/boot && cat > ~/.termux/boot/00_spoofer.sh << 'EOF'
+#!/data/data/com.termux/files/usr/bin/bash
 
+LOG="$HOME/install.log"
+SPOOFER_URL="https://raw.githubusercontent.com/Fluxyyy333/redfinger-wintercode/main/spoofer.apk"
+DELTA_SERIAL="${1:-36ea1127de363534}"
+
+R=$'\033[0m'; G=$'\033[0;32m'; E=$'\033[0;31m'; Y=$'\033[0;33m'; C=$'\033[1;36m'; W=$'\033[1;37m'
+
+ok()  { echo -e "  ${G}✓${R} $1" | tee -a "$LOG"; }
+err() { echo -e "  ${E}✗${R} $1" | tee -a "$LOG"; }
+run() { echo -e "  ${Y}>${R} $1" | tee -a "$LOG"; }
+
+echo -e "\n  ${W}Delta Spoofer${R}"
+run "Download + install spoofer vault..."
+curl -fsSL --retry 3 "$SPOOFER_URL" -o "/sdcard/Download/spoofer.apk" 2>> "$LOG"
+if [ -s "/sdcard/Download/spoofer.apk" ]; then
+  su -c "pm install -r /sdcard/Download/spoofer.apk" >> "$LOG" 2>&1
+  ok "spoofer.apk installed"
+else
+  err "Download spoofer gagal"
+fi
+
+RESETPROP="/data/local/tmp/resetprop"
+SPOOFER_PKG="com.stealth.vault"
+APK_LINE=$(su -c "pm path $SPOOFER_PKG" 2>/dev/null)
+if [ -n "$APK_LINE" ]; then
+  APK_DIR=$(dirname "${APK_LINE#package:}")
+  LIB=$(su -c "find \"$APK_DIR\" -name 'libresetprop.so' 2>/dev/null" | head -1)
+  if [ -n "$LIB" ]; then
+    su -c "cp \"$LIB\" \"$RESETPROP\" && chmod 755 \"$RESETPROP\""
+    su -c "$RESETPROP ro.serialno $DELTA_SERIAL" 2>/dev/null
+    su -c "$RESETPROP ro.boot.serialno $DELTA_SERIAL" 2>/dev/null
+    su -c "settings put secure android_id $DELTA_SERIAL" 2>/dev/null
+    ACTUAL_SER=$(su -c "getprop ro.serialno" 2>/dev/null)
+    ACTUAL_AID=$(su -c "settings get secure android_id" 2>/dev/null)
+    if [ "$ACTUAL_SER" = "$DELTA_SERIAL" ] && [ "$ACTUAL_AID" = "$DELTA_SERIAL" ]; then
+      ok "HWID spoof VERIFIED: $DELTA_SERIAL"
+    else
+      err "HWID MISMATCH! expected=$DELTA_SERIAL got ser=$ACTUAL_SER aid=$ACTUAL_AID"
+    fi
+  else
+    err "libresetprop.so not found in spoofer APK"
+  fi
+else
+  err "Spoofer APK not installed"
+fi
+EOF
+chmod +x ~/.termux/boot/00_spoofer.sh && echo "✅ 00_spoofer.sh installed to auto-boot"
